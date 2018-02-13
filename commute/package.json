@@ -6,6 +6,22 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brampijper/share-your-commute"
+  },
+  "keywords": [
+    "commuting",
+    "reactnative",
+    "redux",
+    "IOS",
+    "Android"
+  ],
+  "author": "Bram Pijper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brampijper/share-your-commute/issues"
+  }, 
   "dependencies": {
     "react": "16.2.0",
     "react-native": "0.53.0"
