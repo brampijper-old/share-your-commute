@@ -23,14 +23,13 @@ const styles = {
     paddingBottom: 10
   },
   buttonStyle: {
-    flex: 1,
-    alignSelf: 'stretch',
-    backgroundColor: '#fff',
-    borderRadius: 5,
+    flex: 0.95,
+    alignSelf: 'stretch', 
+    backgroundColor: '#fff',  
+    borderRadius: 15,
     borderWidth: 1,
     borderColor: '#007aff',
-    marginLeft: 5,
-    marginRight: 5
+    marginLeft: 20
   }
 };
 
