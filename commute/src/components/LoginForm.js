@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { CardSection, Button } from './common'; 
 
 class LoginForm extends Component {
+        
+    onRegisterPress() {
+        Actions.register();
+    }
+
     render() {
-        const { textStyle, textContainerStyle, imageContainerStyle } = styles; 
+        const { textStyle, textContainerStyle, imageContainerStyle } = styles;
         return (
             <View>
                 <CardSection style={imageContainerStyle}>
@@ -15,11 +21,11 @@ class LoginForm extends Component {
                 </CardSection>
 
                 <CardSection style={textContainerStyle}>
-                    <Text style={textStyle}> Register for free! </Text>
+                    <Text style={textStyle}> New user? </Text>
                 </CardSection>
 
                 <CardSection>
-                    <Button>
+                    <Button onPress={() => this.onRegisterPress(this)}>
                         Register
                     </Button>
                 </CardSection>
@@ -31,12 +37,12 @@ class LoginForm extends Component {
                 </CardSection>
 
                 <CardSection style={textContainerStyle}>
-                    <Text style={textStyle}> Already a user? </Text>
+                    <Text style={textStyle}> Existing users: </Text>
                 </CardSection>
 
                 <CardSection>
                     <Button>
-                        Login-In
+                        Log-In
                     </Button>
                 </CardSection>
             
