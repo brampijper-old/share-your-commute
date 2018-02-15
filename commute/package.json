@@ -23,6 +23,7 @@
     "url": "https://github.com/brampijper/share-your-commute/issues"
   },
   "dependencies": {
+    "firebase": "^4.9.1",
     "react": "16.2.0",
     "react-native": "0.53.0",
     "react-native-router-flux": "^4.0.0-beta.28",
