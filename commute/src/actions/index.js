@@ -1,6 +1,3 @@
-export const emailChanged = (text) => {
-    return {
-        type: 'email_changed',
-        payload: text
-    };
-};
+export * from './RegisterActions';
+export * from './BasicInfoActions';
+
