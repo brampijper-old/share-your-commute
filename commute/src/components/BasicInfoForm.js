@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text, SegmentedControlIOS } from 'react-native';
 import { connect } from 'react-redux';
 import { Input, CardSection, Card, Title } from './common/';
 import { usernameChanged } from '../actions/';
 
 class BasicInfoForm extends Component {
+    state = { selectedIndex: 0 };
     onUsernameChange(text) {
         this.props.usernameChanged(text);
     }
@@ -21,6 +22,21 @@ class BasicInfoForm extends Component {
                         label='Type your username:'
                         placeholder='katykit19'
                         onChangeText={this.onUsernameChange.bind(this)}
+                    />
+                </CardSection>
+            </Card>
+
+            <Card>
+                <CardSection style={{ flexDirection: 'column', justifyContent: 'space-between' }} >
+                    <Text style={{ paddingBottom: 10, fontSize: 18 }} >
+                        Your gender:
+                    </Text>
+                    <SegmentedControlIOS
+                        values={['Male', 'Female', 'None']}
+                        selectedIndex={this.state.selectedIndex}
+                        onChange={(event) => {
+                            this.setState({ selectedIndex: event.nativeEvent.selectedSegmentIndex });
+                        }}
                     />
                 </CardSection>
             </Card>
